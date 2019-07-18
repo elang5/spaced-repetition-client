@@ -54,6 +54,7 @@ class LoginForm extends Component {
     return (
       <form
         className='LoginForm'
+        id='login-form'
         onSubmit={this.handleSubmit}
       >
         <div role='alert' className="Error">
@@ -61,7 +62,8 @@ class LoginForm extends Component {
         </div>
         <div className='username-container'>
           <Label htmlFor='login-username-input'>
-            Username
+            Username<br/>
+            Demo: 'testing'
           </Label>
           <Input
             ref={this.firstInput}
@@ -72,7 +74,8 @@ class LoginForm extends Component {
         </div>
         <div className='password-container'>
           <Label htmlFor='login-password-input'>
-            Password
+            Password<br/>
+            Demo: '!Testing1'
           </Label>
           <Input
             id='login-password-input'
@@ -81,7 +84,7 @@ class LoginForm extends Component {
             required
           />
         </div>
-        <Button type='submit' className="submit stylish-btn">
+        <Button type='submit' id="login-button" className="submit stylish-btn">
           Login
         </Button>
         <Link className="already-signed-up" to='/register'>Sign up</Link>
